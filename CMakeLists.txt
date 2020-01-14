@@ -16,7 +16,7 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Intel")
 endif()
 
 # Enable testing?
-enable_testing()
+include(CTest)
 
 # BPHash-specific options
 option(BPHASH_USE_TYPEID "Hash the typeid name of the object along with the data" OFF)
