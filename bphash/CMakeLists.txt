@@ -8,7 +8,7 @@ add_library(bphash Hasher.cpp
            )
 
 # Include the main source directory (my parent) as an include directory
-target_include_directories(bphash PRIVATE ${CMAKE_SOURCE_DIR})
+target_include_directories(bphash PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Where to install the library
 install(TARGETS bphash
