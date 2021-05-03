@@ -171,7 +171,9 @@ class Hasher
 
 
         /*! \brief Hash an object with an appropriate `hash_object()` free function */
-        template<typename T>
+        template<typename T,
+          typename = typename std::enable_if<not detail::detect_hash_member<T>::value>::type
+        >
         auto hash_single_(const T & obj)
         -> decltype( hash_object( std::declval<const T &>(), std::declval<Hasher &>() ), void())
         {
