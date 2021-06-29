@@ -55,7 +55,9 @@ endif()
 add_subdirectory(bphash)
 
 # Directory with some tests
-add_subdirectory(test)
+if(BUILD_TESTING)
+    add_subdirectory(test)
+endif()
 
 ####################################
 # Exporting the CMake configuration
